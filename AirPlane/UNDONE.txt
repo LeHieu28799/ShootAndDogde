@@ -1,0 +1,165 @@
+	sf::Texture texture_explosion1;
+        if (!texture_explosion1.loadFromFile("explosion1.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion1;
+        explosion1.setTexture(texture_explosion1);
+        explosion1.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion1);
+   
+
+        sf::Texture texture_explosion2;
+        if (!texture_explosion2.loadFromFile("explosion2.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion2;
+        explosion2.setTexture(texture_explosion2);
+        explosion2.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion2);
+        
+        sf::Texture texture_explosion3;
+        if (!texture_explosion3.loadFromFile("explosion3.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion3;
+        explosion3.setTexture(texture_explosion3);
+        explosion3.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion3);
+
+        sf::Texture texture_explosion4;
+        if (!texture_explosion4.loadFromFile("explosion4.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion4;
+        explosion4.setTexture(texture_explosion4);
+        explosion4.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion4);
+
+        sf::Texture texture_explosion5;
+        if (!texture_explosion5.loadFromFile("explosion5.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion5;
+        explosion5.setTexture(texture_explosion5);
+        explosion5.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion5);
+
+        sf::Texture texture_explosion6;
+        if (!texture_explosion6.loadFromFile("explosion6.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion6;
+        explosion6.setTexture(texture_explosion6);
+        explosion6.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion6);
+
+        sf::Texture texture_explosion7;
+        if (!texture_explosion7.loadFromFile("explosion7.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion7;
+        explosion7.setTexture(texture_explosion7);
+        explosion7.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion7);
+
+        sf::Texture texture_explosion8;
+        if (!texture_explosion8.loadFromFile("explosion8.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion8;
+        explosion8.setTexture(texture_explosion8);
+        explosion8.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion8);
+
+        sf::Texture texture_explosion9;
+        if (!texture_explosion9.loadFromFile("explosion9.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion9;
+        explosion9.setTexture(texture_explosion9);
+        explosion9.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion9);
+
+        sf::Texture texture_explosion10;
+        if (!texture_explosion10.loadFromFile("explosion10.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion10;
+        explosion10.setTexture(texture_explosion10);
+        explosion10.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion10);
+
+        sf::Texture texture_explosion11;
+        if (!texture_explosion11.loadFromFile("explosion11.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion11;
+        explosion11.setTexture(texture_explosion11);
+        explosion11.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion11);
+	
+	sf::Texture texture_explosion12;
+        if (!texture_explosion12.loadFromFile("explosion12.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        sf::Sprite explosion12;
+        explosion12.setTexture(texture_explosion12);
+        explosion12.setPosition(sf::Vector2f(xShip,yShip));
+        window.draw(explosion12);
+
+************************************************************************************
+************************************************************************************
+************************************************************************************
+************************************************************************************
+
+sf::Texture texture_explosion1;
+        if (!texture_explosion1.loadFromFile("explosion1.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[0].setPosition(sf::Vector2f(xShip,yShip));
+        bang[0].setTexture(texture_explosion1);
+
+        sf::Texture texture_explosion2;
+        if (!texture_explosion2.loadFromFile("explosion2.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[1].setPosition(sf::Vector2f(xShip,yShip));
+        bang[1].setTexture(texture_explosion2);
+
+        sf::Texture texture_explosion3;
+        if (!texture_explosion3.loadFromFile("explosion3.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[2].setPosition(sf::Vector2f(xShip,yShip));
+        bang[2].setTexture(texture_explosion3);
+
+        sf::Texture texture_explosion4;
+        if (!texture_explosion4.loadFromFile("explosion4.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[3].setPosition(sf::Vector2f(xShip,yShip));
+        bang[3].setTexture(texture_explosion4);
+
+        sf::Texture texture_explosion5;
+        if (!texture_explosion5.loadFromFile("explosion5.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[4].setPosition(sf::Vector2f(xShip,yShip));
+        bang[4].setTexture(texture_explosion5);
+
+        sf::Texture texture_explosion6;
+        if (!texture_explosion6.loadFromFile("explosion6.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[5].setPosition(sf::Vector2f(xShip,yShip));
+        bang[5].setTexture(texture_explosion6);
+
+        sf::Texture texture_explosion7;
+        if (!texture_explosion7.loadFromFile("explosion7.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[6].setPosition(sf::Vector2f(xShip,yShip));
+        bang[6].setTexture(texture_explosion7);
+
+        sf::Texture texture_explosion8;
+        if (!texture_explosion8.loadFromFile("explosion8.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[7].setPosition(sf::Vector2f(xShip,yShip));
+        bang[7].setTexture(texture_explosion8);
+
+        sf::Texture texture_explosion9;
+        if (!texture_explosion9.loadFromFile("explosion9.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[8].setPosition(sf::Vector2f(xShip,yShip));
+        bang[8].setTexture(texture_explosion9);
+
+        sf::Texture texture_explosion10;
+        if (!texture_explosion10.loadFromFile("explosion10.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[9].setPosition(sf::Vector2f(xShip,yShip));
+        bang[9].setTexture(texture_explosion10);
+
+        sf::Texture texture_explosion11;
+        if (!texture_explosion11.loadFromFile("explosion11.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[10].setPosition(sf::Vector2f(xShip,yShip));
+        bang[10].setTexture(texture_explosion11);
+
+        sf::Texture texture_explosion12;
+        if (!texture_explosion12.loadFromFile("explosion12.png")) cout<<"Wrong.... Can't Find The Image...."<<endl;
+        bang[11].setPosition(sf::Vector2f(xShip,yShip));
+        bang[11].setTexture(texture_explosion12);
+        *********************************************************8
+************************************************************888
+8******************************************************
+bool bullet_collide(float& xBullet , float& yBullet,
+             float& xCreep, float& yCreep,
+             float& xBoss , float& yBoss,
+             float& xCreep1, float& yCreep1,
+             float& xBoss1, float& yBoss1) {
+    if ( (xBullet <= xCreep+30 && yBullet <= yCreep+40 && xBullet >= xCreep-42 && yBullet >= yCreep-44)||
+         (xBullet <= xBoss+60 && yBullet <= yBoss+85 && xBullet >= xBoss-45 && yBullet >= yBoss-45) ||
+         (xBullet <= xCreep1+30 && yBullet <= yCreep1+40 && xBullet >= xCreep1-42 && yBullet >= yCreep1-44) ||
+         (xBullet <= xBoss1+60 && yBullet <= yBoss1+85 && xBullet >= xBoss1-45 && yBullet >= yBoss1-45) ) {
+        return true;
+    }
+    return false;
+}
