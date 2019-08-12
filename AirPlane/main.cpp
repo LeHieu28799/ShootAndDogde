@@ -182,18 +182,10 @@ void Failed (sf::RenderWindow& window) {
 }
 
 void Score (int& score,
+            sf::Text& text1,
             sf::RenderWindow& window) {
-    sf::Text text1;
-    sf::Font font1;
-    text1.setFont(font1);
-    if (!font1.loadFromFile("Azonix.otf")) cout<<"Wrong.... Can't Find It...."<<endl;
     text1.setString("Score: " + std::to_string(score));
-    text1.setCharacterSize(30);
-    text1.setFillColor(sf::Color::Red);
-    text1.setStyle(sf::Text::Regular| sf::Text::Underlined);
-    text1.setPosition(sf::Vector2f(550,10));
     window.draw(text1);
-
 }
 
 void falling (float& xCreep, float& yCreep,
@@ -247,6 +239,15 @@ int main() {
                  xBoss1  = rand()%800+15, yBoss1 = 0,
                  xBullet = 0, yBullet = 0;
     static int score = 0, turn =0, save =0;
+    //score
+    sf::Text text1;
+    sf::Font font1;
+    text1.setFont(font1);
+    if (!font1.loadFromFile("Azonix.otf")) cout<<"Wrong.... Can't Find It...."<<endl;
+    text1.setCharacterSize(30);
+    text1.setFillColor(sf::Color::Red);
+    text1.setStyle(sf::Text::Regular| sf::Text::Underlined);
+    text1.setPosition(sf::Vector2f(550,10));
 
     // create the ship
     sf::Texture texture_ship;
@@ -316,6 +317,7 @@ int main() {
         }
         // clear the window with black color
         window.clear(sf::Color::Black);
+
         //ship's position
         ship.setPosition(sf::Vector2f(xShip,yShip));
         window.draw(ship);
@@ -380,20 +382,26 @@ int main() {
                 turn++;
             }
         }
+
+        //score
+        Score(score,text1,window);
+
         //Creep
         creep.setPosition(sf::Vector2f(xCreep,yCreep));
         window.draw(creep);
         creep1.setPosition(sf::Vector2f(xCreep1,yCreep1));
         window.draw(creep1);
+
         //boss
         boss.setPosition(sf::Vector2f(xBoss,yBoss));
         window.draw(boss);
         boss1.setPosition(sf::Vector2f(xBoss1,yBoss1));
         window.draw(boss1);
+
         //Show text: Mission failed without being covered by others
         if (Collide(xShip,yShip,xCreep,yCreep,xBoss,yBoss,xCreep1,yCreep1,xBoss1,yBoss1)) {
             Failed(window);
-            Score(score,window);
+            Score(score,text1,window);
         }
 
         // end the current frame
