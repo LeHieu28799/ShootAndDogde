@@ -86,7 +86,7 @@ void bullet_collide_creep( float& xBullet , float& yBullet,
                            sf::Sprite& creep1,
                            sf::RenderWindow& window,
                            int& score) {
-    if (xBullet <= xCreep+30 && yBullet <= yCreep+40 && xBullet >= xCreep-42 && yBullet >= yCreep-44) {
+    if (xBullet <= xCreep +30 && yBullet <= yCreep+40 && xBullet >= xCreep-42 && yBullet >= yCreep-44) {
         xCreep = rand()%800;
         if (xCreep <=20) xCreep+=10;
         if (xCreep >=765) xCreep = 755;
@@ -142,7 +142,7 @@ void bullet_collide_boss(  float& xShip, float& yShip,
         cout<<"score: "<<score<<endl;
     }
 }
-
+// check if ship collide creep or boss
 bool Collide(float& xShip , float& yShip,
              float& xCreep, float& yCreep,
              float& xBoss , float& yBoss,
@@ -156,7 +156,7 @@ bool Collide(float& xShip , float& yShip,
     }
     return false;
 }
-
+//crashing ship ưhen collide
 void Crash( float& xShip, float& yShip,
             sf::RenderWindow& window) {
         //Explosion
@@ -167,7 +167,7 @@ void Crash( float& xShip, float& yShip,
         explosion12.setPosition(sf::Vector2f(xShip,yShip));
         window.draw(explosion12);
 }
-
+// Text: Mission failed
 void Failed (sf::RenderWindow& window) {
         //Mission Failed (TEXT)
         sf::Text text;
@@ -246,7 +246,7 @@ int main() {
                  xBoss   = rand()%800, yBoss = 0,
                  xBoss1  = rand()%800+15, yBoss1 = 0,
                  xBullet = 0, yBullet = 0;
-    static int score = 0;
+    static int score = 0, turn =0, save =0;
 
     // create the ship
     sf::Texture texture_ship;
@@ -341,6 +341,14 @@ int main() {
         }
 
         //creep and boss return after out the screen
+
+        if (turn% 8 ==0 and turn/8 != save) {
+            dy_Boss += 0.023;
+            dy_Boss1 += 0.023;
+            dy_Creep += 0.053;
+            dy_Creep1 += 0.053;
+            save = turn/8;
+        }
         if ((yCreep < 600 || yBoss <600 ||  yCreep1<600 || yBoss1<600) && !Collide(xShip,yShip,xCreep,yCreep,xBoss,yBoss,xCreep1,yCreep1,xBoss1,yBoss1)) {
             falling(xCreep, yCreep, xBoss, yBoss, xCreep1, yCreep1, xBoss1, yBoss1, dy_Creep, dy_Boss, dy_Creep1, dy_Boss1, creep, boss, creep1, boss1, window);
             if (yCreep >= 600) {
@@ -348,24 +356,28 @@ int main() {
                 if (xCreep <=20) xCreep+=10;
                 if (xCreep >=765) xCreep = 755;
                 yCreep=0;
+                turn ++;
             }
             if (yBoss >= 600) {
                 xBoss = rand() % 800;
                 if (xBoss <=45) xBoss+=20;
                 if (xBoss >=755) xBoss = 755;
                 yBoss = 0;
+                turn++;
             }
             if (yCreep1 >= 600) {
                 xCreep1 = rand()%800;
                 if (xCreep1 <=20) xCreep1+=10;
                 if (xCreep1 >=765) xCreep1 = 755;
                 yCreep1=0;
+                turn++;
             }
             if (yBoss1 >= 600) {
                 xBoss1 = rand() % 800;
                 if (xBoss1 <=45) xBoss1+=20;
                 if (xBoss1 >=755) xBoss1 = 755;
                 yBoss1 = 0;
+                turn++;
             }
         }
         //Creep
